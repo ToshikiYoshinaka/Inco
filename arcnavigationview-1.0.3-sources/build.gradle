@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('arcnavigationview-1.0.3-sources.jar'))

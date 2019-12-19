@@ -1,0 +1,2 @@
+include ':app', ':mylibrary', ':fancybuttons-1.9.1', ':arcnavigationview-1.0.3-sources'
+rootProject.name='Inco'

@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "269661901795",
+    "firebase_url": "https://inventorycontrol-5bcd5.firebaseio.com",
+    "project_id": "inventorycontrol-5bcd5",
+    "storage_bucket": "inventorycontrol-5bcd5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269661901795:android:54c78bbad460cec4f086d6",
+        "android_client_info": {
+          "package_name": "com.example.inco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "269661901795-9bbrkhgbg1f4iq9ka3go62s3qqu0lnum.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhBbiHpEdiBZq8sTEw_6rECsWZOH0dKm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "269661901795-9bbrkhgbg1f4iq9ka3go62s3qqu0lnum.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269661901795:android:59688c7a924eafd7f086d6",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "269661901795-9bbrkhgbg1f4iq9ka3go62s3qqu0lnum.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhBbiHpEdiBZq8sTEw_6rECsWZOH0dKm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "269661901795-9bbrkhgbg1f4iq9ka3go62s3qqu0lnum.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
