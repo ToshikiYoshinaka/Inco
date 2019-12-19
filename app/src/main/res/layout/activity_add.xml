@@ -5,10 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".AddActivity">
+    tools:context=".AddActivity"
+    android:background="@drawable/gd">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <EditText
             android:id="@+id/title"
             android:layout_width="233dp"
@@ -19,9 +27,14 @@
             android:hint="商品名"
             android:singleLine="true"
             android:textSize="32sp"
+            app:layout_constraintBottom_toTopOf="@+id/add_button"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.109"
             tools:ignore="MissingConstraints" />
+
         <TextView
             android:id="@+id/textVIew2"
             android:layout_width="325dp"
@@ -37,6 +50,7 @@
             app:layout_constraintTop_toBottomOf="@+id/title"
             app:layout_constraintVertical_bias="0.291"
             tools:ignore="MissingConstraints" />
+
         <TextView
             android:id="@+id/text"
             android:layout_width="362dp"
@@ -52,6 +66,7 @@
             app:layout_constraintTop_toBottomOf="@+id/title"
             app:layout_constraintVertical_bias="0.668"
             tools:ignore="MissingConstraints" />
+
         <Button
             android:id="@+id/dialogButton"
             android:layout_width="210dp"
@@ -66,14 +81,15 @@
             app:layout_constraintTop_toBottomOf="@+id/title"
             app:layout_constraintVertical_bias="0.088"
             tools:ignore="MissingConstraints" />
+
         <EditText
             android:id="@+id/content"
-            android:layout_width="347dp"
+            android:layout_width="350dp"
             android:layout_height="232dp"
             android:layout_gravity="top"
-            android:background="@android:color/transparent"
             android:gravity="top|left"
             android:textSize="26sp"
+            android:background="@drawable/partsdesign"
             app:layout_constraintBottom_toTopOf="@+id/add_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -81,16 +97,19 @@
             app:layout_constraintTop_toBottomOf="@+id/textVIew2"
             app:layout_constraintVertical_bias="0.088"
             tools:ignore="MissingConstraints" />
+
         <Button
             android:id="@+id/add_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="32dp"
             android:onClick="save"
             android:text="保存"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.88" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
