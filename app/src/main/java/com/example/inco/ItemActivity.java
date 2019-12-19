@@ -172,6 +172,11 @@ public class ItemActivity extends AppCompatActivity implements ListView.OnItemLo
             startActivity(lntent);
             finish();
         } else if (id == R.id.navigation_notifications) {
+            Intent dntent = new Intent(ItemActivity.this,SettingActivity.class);
+            dntent.putExtra("check", true);
+            startActivity(dntent);
+            finish();
+
         } else if (id == R.id.action_logout) {
             mAuth = FirebaseAuth.getInstance();
             mAuth.signOut();

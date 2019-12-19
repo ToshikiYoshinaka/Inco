@@ -23,6 +23,8 @@
             android:label="商品追加"></activity>
         <activity android:name=".ChatActivity"
             android:label="チャット"></activity>
+        <activity android:name=".SettingActivity"
+            android:label="設定"></activity>
 
     </application>
 

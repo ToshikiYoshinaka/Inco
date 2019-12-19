@@ -5,4 +5,5 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_logout">Logout</string>
     <string name="sign_out">サインアウト</string>
+    <string name="select_class"></string>
 </resources>

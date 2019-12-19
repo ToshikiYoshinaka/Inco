@@ -387,6 +387,10 @@ public class ChatActivity extends AppCompatActivity implements GoogleApiClient.O
             startActivity(lntent);
             finish();
         } else if (id == R.id.navigation_notifications) {
+            Intent dntent = new Intent(ChatActivity.this,  SettingActivity.class);
+            dntent.putExtra("check", true);
+            startActivity(dntent);
+            finish();
         } else if (id == R.id.action_logout) {
             mAuth = FirebaseAuth.getInstance();
             mAuth.signOut();
