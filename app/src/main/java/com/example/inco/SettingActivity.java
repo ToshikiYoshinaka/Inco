@@ -1,11 +1,10 @@
 package com.example.inco;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
-
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,8 +14,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
-
-public class SettingActivity  extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener  {
+public class SettingActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     public FirebaseAuth mAuth;
 
@@ -62,33 +60,30 @@ public class SettingActivity  extends AppCompatActivity implements NavigationVie
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+
+
     }
-    @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.notification:
-                Intent dntent = new Intent(SettingActivity.this, NotificationActivity.class);
-                dntent.putExtra("check", true);
-                startActivity(dntent);
-                finish();
+        if (v != null) {
+            switch (v.getId()) {
+                case R.id.notification:
+                    Intent intent = new Intent(SettingActivity.this, NotificationActivity.class);
+                    intent.putExtra("check", true);
+                    startActivity(intent);
+                    finish();
+                    // クリック処理
+                    break;
 
-            case R.id.privacy:
-
-                break;
+                case R.id.privacy:
+                    Intent tntent = new Intent(SettingActivity.this, PraivacyActivity.class);
+                    tntent.putExtra("check", true);
+                    startActivity(tntent);
+                    finish();
+                    // クリック処理
+                    break;
+            }
         }
     }
-
 }
-class NotificationActivity extends AppCompatActivity{
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_not);
-    }
-
-
-}
-
 
 

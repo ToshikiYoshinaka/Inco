@@ -167,22 +167,22 @@ public class ItemActivity extends AppCompatActivity implements ListView.OnItemLo
             finish();
             // Handle the camera action
         } else if (id == R.id.action_chat) {
-            Intent lntent = new Intent(ItemActivity.this, ChatActivity.class);
-            lntent.putExtra("check", true);
-            startActivity(lntent);
+            Intent intent = new Intent(ItemActivity.this, ChatActivity.class);
+            intent.putExtra("check", true);
+            startActivity(intent);
             finish();
         } else if (id == R.id.navigation_notifications) {
-            Intent dntent = new Intent(ItemActivity.this,SettingActivity.class);
-            dntent.putExtra("check", true);
-            startActivity(dntent);
+            Intent intent = new Intent(ItemActivity.this,SettingActivity.class);
+            intent.putExtra("check", true);
+            startActivity(intent);
             finish();
 
         } else if (id == R.id.action_logout) {
             mAuth = FirebaseAuth.getInstance();
             mAuth.signOut();
-            Intent tntent = new Intent(ItemActivity.this, MainActivity.class);
-            tntent.putExtra("check", true);
-            startActivity(tntent);
+            Intent intent = new Intent(ItemActivity.this, MainActivity.class);
+            intent.putExtra("check", true);
+            startActivity(intent);
             finish();
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

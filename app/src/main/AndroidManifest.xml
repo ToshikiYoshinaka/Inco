@@ -25,6 +25,10 @@
             android:label="チャット"></activity>
         <activity android:name=".SettingActivity"
             android:label="設定"></activity>
+        <activity android:name=".NotificationActivity"
+            android:label="通知設定"></activity>
+        <activity android:name=".PraivacyActivity"
+            android:label="プライバシーポリシー"></activity>
 
     </application>
 
