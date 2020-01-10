@@ -3,20 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
     <item
-        android:id="@+id/action_chat"
+        android:id="@+id/side_chat"
         android:icon="@drawable/ic_action_chat"
         android:title="チャット"
         />
     <!-- Settings, should always be in the overflow -->
-    <item android:id="@+id/action_list"
+    <item android:id="@+id/side_list"
         android:title="リスト"
         android:icon="@drawable/ic_action_name"
         />
-    <item android:id="@+id/navigation_notifications"
+    <item android:id="@+id/side_setting"
         android:title="設定"
         android:icon="@drawable/ic_action_setting"/>
     <item
-        android:id="@+id/action_logout"
+        android:id="@+id/side_logout"
         android:icon="@drawable/ic_action_logout"
         android:title="ログアウト"/>
 </menu>

@@ -51,7 +51,7 @@ import com.google.firebase.storage.UploadTask;
 import java.util.HashMap;
 import java.util.Map;
 import de.hdodenhof.circleimageview.CircleImageView;
-public class ChatActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, NavigationView.OnNavigationItemSelectedListener {
+public class ChatActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener,  View.OnClickListener {
     public static class MessageViewHolder extends RecyclerView.ViewHolder {
         TextView messageTextView;
         ImageView messageImageView;
@@ -92,12 +92,14 @@ public class ChatActivity extends AppCompatActivity implements GoogleApiClient.O
     private DatabaseReference mFirebaseDatabaseReference;
     private FirebaseRecyclerAdapter<FriendlyMessage, MessageViewHolder>
             mFirebaseAdapter;
+    public Intent lntent;
+    public Intent dntent;
+    public Intent tntent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+
         //ログイン情報を取得
         user = FirebaseAuth.getInstance().getCurrentUser();
         //user id = Uid を取得する
@@ -112,6 +114,10 @@ public class ChatActivity extends AppCompatActivity implements GoogleApiClient.O
         mLinearLayoutManager = new LinearLayoutManager(this);
         mLinearLayoutManager.setStackFromEnd(true);
         mMessageRecyclerView.setLayoutManager(mLinearLayoutManager);
+        findViewById(R.id.action_list).setOnClickListener(this);
+        findViewById(R.id.action_chat).setOnClickListener(this);
+        findViewById(R.id.action_setting).setOnClickListener(this);
+        findViewById(R.id.action_logout).setOnClickListener(this);
         mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
         SnapshotParser<FriendlyMessage> parser = new SnapshotParser<FriendlyMessage>() {
             @Override
@@ -240,6 +246,37 @@ public class ChatActivity extends AppCompatActivity implements GoogleApiClient.O
                 startActivityForResult(intent, REQUEST_IMAGE);
             }
         });
+
+    }
+    @Override
+    public void onClick(View v) {
+//                Intent intent = new Intent(ItemActivity.this, ItemActivity.class);
+//                intent.putExtra("check", true);
+//                startActivity(intent);
+//                finish();
+        switch (v.getId()) {
+            case R.id.action_list:
+                lntent = new Intent(ChatActivity.this, ItemActivity.class);
+                lntent.putExtra("check", true);
+                startActivity(lntent);
+                finish();
+                break;
+            case R.id.action_setting:
+                dntent = new Intent(ChatActivity.this, SettingActivity.class);
+                dntent.putExtra("check", true);
+                startActivity(dntent);
+                finish();
+                break;
+            case R.id.action_logout:
+                mAuth = FirebaseAuth.getInstance();
+                mAuth.signOut();
+                tntent = new Intent(ChatActivity.this, MainActivity.class);
+                tntent.putExtra("check", true);
+                startActivity(tntent);
+                finish();
+                break;
+
+        }
     }
     @Override
     public void onStart() {
@@ -370,37 +407,5 @@ public class ChatActivity extends AppCompatActivity implements GoogleApiClient.O
                     }
                 });
     }
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-        if (id == R.id.action_list) {
-            Intent intent = new Intent(ChatActivity.this, ItemActivity.class);
-            intent.putExtra("check", true);
-            startActivity(intent);
-            finish();
-            // Handle the camera action
-        } else if (id == R.id.action_chat) {
-            Intent lntent = new Intent(ChatActivity.this, ChatActivity.class);
-            lntent.putExtra("check", true);
-            startActivity(lntent);
-            finish();
-        } else if (id == R.id.navigation_notifications) {
-            Intent dntent = new Intent(ChatActivity.this,  SettingActivity.class);
-            dntent.putExtra("check", true);
-            startActivity(dntent);
-            finish();
-        } else if (id == R.id.action_logout) {
-            mAuth = FirebaseAuth.getInstance();
-            mAuth.signOut();
-            Intent tntent = new Intent(ChatActivity.this, MainActivity.class);
-            tntent.putExtra("check", true);
-            startActivity(tntent);
-            finish();
-        }
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
+
 }
