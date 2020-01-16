@@ -27,28 +27,26 @@
             android:hint="商品名"
             android:singleLine="true"
             android:textSize="32sp"
-            app:layout_constraintBottom_toTopOf="@+id/add_button"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.109"
+            app:layout_constraintVertical_bias="0.07"
             tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/textVIew2"
-            android:layout_width="325dp"
-            android:layout_height="27dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="362dp"
+            android:layout_height="25dp"
             android:text="メモ"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/add_button"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.326"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title"
-            app:layout_constraintVertical_bias="0.291"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.461"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -59,12 +57,12 @@
             android:layout_marginEnd="16dp"
             android:hint="期限日"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/textVIew2"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title"
-            app:layout_constraintVertical_bias="0.668"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.404"
             tools:ignore="MissingConstraints" />
 
         <Button
@@ -84,24 +82,24 @@
 
         <EditText
             android:id="@+id/content"
-            android:layout_width="350dp"
+            android:layout_width="362dp"
             android:layout_height="232dp"
             android:layout_gravity="top"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/partsdesign"
             android:gravity="top|left"
             android:textSize="26sp"
-            android:background="@drawable/partsdesign"
-            app:layout_constraintBottom_toTopOf="@+id/add_button"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.326"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textVIew2"
-            app:layout_constraintVertical_bias="0.088"
             tools:ignore="MissingConstraints" />
 
         <Button
             android:id="@+id/add_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:layout_marginBottom="32dp"
             android:onClick="save"
             android:text="保存"
@@ -109,7 +107,38 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.526"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/content" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="61dp"
+            android:layout_height="29dp"
+            android:layout_marginBottom="30dp"
+            android:background="@null"
+            android:text="画像選択"
+            app:layout_constraintBottom_toTopOf="@+id/text"
+            app:layout_constraintEnd_toStartOf="@+id/dialogButton"
+            app:layout_constraintHorizontal_bias="0.364"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_view"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="139dp"
+            android:layout_height="106dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.88" />
+            app:layout_constraintVertical_bias="0.06"
+            tools:ignore="MissingConstraints" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </LinearLayout>

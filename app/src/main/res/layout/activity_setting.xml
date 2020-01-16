@@ -72,7 +72,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="73dp"
+        android:layout_height="48dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
@@ -84,10 +84,11 @@
 
         <ImageButton
             android:id="@+id/action_chat"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_marginStart="28dp"
             android:background="@drawable/ic_action_chat"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/action_list"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -95,11 +96,12 @@
 
         <ImageButton
             android:id="@+id/action_setting"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_marginStart="40dp"
             android:background="@drawable/ic_action_setting"
             android:contentDescription="TODO"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/action_logout"
             app:layout_constraintStart_toEndOf="@+id/action_list"
             app:layout_constraintTop_toTopOf="parent"
@@ -107,11 +109,12 @@
 
         <ImageButton
             android:id="@+id/action_logout"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="28dp"
             android:background="@drawable/ic_action_logout"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/action_setting"
             app:layout_constraintTop_toTopOf="parent"
@@ -119,59 +122,15 @@
 
         <ImageButton
             android:id="@+id/action_list"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_marginStart="40dp"
             android:background="@drawable/ic_action_name"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/action_setting"
             app:layout_constraintStart_toEndOf="@+id/action_chat"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints,NotSibling,UnknownId" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="55dp"
-            android:layout_marginEnd="22dp"
-            android:text="チャット"
-            app:layout_constraintEnd_toStartOf="@+id/textView10"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/action_chat"
-            tools:ignore="MissingConstraints" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="67dp"
-            android:text="商品リスト"
-            app:layout_constraintEnd_toStartOf="@+id/textView11"
-            app:layout_constraintStart_toEndOf="@+id/textView9"
-            app:layout_constraintTop_toBottomOf="@+id/action_list"
-            tools:ignore="MissingConstraints" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="70dp"
-            android:text="設定"
-            app:layout_constraintEnd_toStartOf="@+id/textView12"
-            app:layout_constraintStart_toEndOf="@+id/textView10"
-            app:layout_constraintTop_toBottomOf="@+id/action_setting"
-            tools:ignore="MissingConstraints" />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:text="ログアウト"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/action_logout"
-            tools:ignore="MissingConstraints" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
