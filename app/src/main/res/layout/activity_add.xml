@@ -110,12 +110,13 @@
             app:layout_constraintTop_toBottomOf="@+id/content" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/image_button"
             android:layout_width="61dp"
             android:layout_height="29dp"
             android:layout_marginBottom="30dp"
             android:background="@null"
             android:text="画像選択"
+            android:onClick="Picture"
             app:layout_constraintBottom_toTopOf="@+id/text"
             app:layout_constraintEnd_toStartOf="@+id/dialogButton"
             app:layout_constraintHorizontal_bias="0.364"

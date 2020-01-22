@@ -1,2 +1,2 @@
-include ':app', ':mylibrary', ':fancybuttons-1.9.1', ':arcnavigationview-1.0.3-sources'
+include ':app', ':mylibrary', ':fancybuttons-1.9.1', ':arcnavigationview-1.0.3-sources', ':picasso-2.71828'
 rootProject.name='Inco'

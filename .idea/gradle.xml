@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/arcnavigationview-1.0.3-sources" />
             <option value="$PROJECT_DIR$/fancybuttons-1.9.1" />
             <option value="$PROJECT_DIR$/mylibrary" />
+            <option value="$PROJECT_DIR$/picasso-2.71828" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
